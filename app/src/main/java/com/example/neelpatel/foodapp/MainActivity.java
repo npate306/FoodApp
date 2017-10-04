@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button cuisines;
     Button search;
+    Button categories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, Search.class);
+                startActivity(i);
+            }
+        });
+        categories = (Button) findViewById(R.id.categories);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Categories.class);
                 startActivity(i);
             }
         });
