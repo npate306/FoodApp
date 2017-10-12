@@ -167,6 +167,14 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onLocationChanged(Location location) {
-        
+
+    }
+
+    public double getCurrentLatitude() {
+        return currentLatitude;
+    }
+
+    public double getCurrentLongitude() {
+        return currentLongitude;
     }
 }
