@@ -11,7 +11,7 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
     @GET("search")
-    Call<Example> getSearch(@Query("lat") int lat, @Query("lon") int lon,
+    Call<Example> getSearch(@Query("lat") double lat, @Query("lon") double lon,
                             @Query("count") int count, @Query("api_key") String apiKey);
 
 }
