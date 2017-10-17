@@ -7,15 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 /**
  * Created by Neel Patel on 10/15/2017.
  */
 
-public class SearchAdapter  extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder>{
+public class Adapter extends RecyclerView.Adapter<Adapter.SearchViewHolder>{
 
     private List<Restaurant> restaurants;
     private Context context;
@@ -38,20 +36,20 @@ public class SearchAdapter  extends RecyclerView.Adapter<SearchAdapter.SearchVie
         }
     }
 
-    public SearchAdapter(List<Restaurant> restaurants, int rowLayout, Context context) {
+    public Adapter(List<Restaurant> restaurants, int rowLayout, Context context) {
         this.restaurants = restaurants;
         this.rowLayout = rowLayout;
         this.context = context;
     }
 
     @Override
-    public SearchAdapter.SearchViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public Adapter.SearchViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
         return new SearchViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(SearchAdapter.SearchViewHolder holder, int position) {
+    public void onBindViewHolder(Adapter.SearchViewHolder holder, int position) {
         holder.textOne.setText("Name: " + restaurants.get(position).getName());
         holder.textTwo.setText("Cost for two people: " + restaurants.get(position).getAverageCostForTwo());
         holder.textThree.setText("Average rating: " + restaurants.get(position).getUserRating().getAggregateRating());

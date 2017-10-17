@@ -9,8 +9,8 @@
     <Button
         android:id="@+id/categories"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_above="@+id/restaurants"
+        android:layout_height="140dp"
+        android:layout_above="@+id/search"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
@@ -21,23 +21,9 @@
         android:textSize="50dp" />
 
     <Button
-        android:id="@+id/restaurants"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_above="@+id/search"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:background="@android:color/holo_green_dark"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:text="Restaurants"
-        android:textSize="50dp" />
-
-    <Button
         android:id="@+id/search"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="137dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
@@ -52,19 +38,19 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:text="Welcome to the best Food App ever!"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="40sp"
         tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="-1dp" />
+        tools:layout_editor_absoluteY="-1dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/cuisines"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_above="@+id/categories"
+        android:layout_height="140dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
