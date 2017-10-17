@@ -14,4 +14,12 @@ public interface ApiInterface {
     Call<Example> getSearch(@Query("lat") double lat, @Query("lon") double lon,
                             @Query("count") int count, @Query("api_key") String apiKey);
 
+    @GET("search")
+    Call<Example> getCuisines(@Query("lat") double lat, @Query("lon") double lon,
+                            @Query("cuisines") String cuisine, @Query("api_key") String apiKey);
+
+    @GET("search")
+    Call<Example> getCategories(@Query("lat") double lat, @Query("lon") double lon,
+                              @Query("category") String category, @Query("api_key") String apiKey);
+
 }
