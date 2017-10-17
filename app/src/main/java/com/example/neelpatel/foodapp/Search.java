@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -27,7 +26,6 @@ public class Search extends Activity{
     Button button;
     RecyclerView recyclerView;
     String input;
-    private final static String API_KEY = "e0afea630634e613d01e93ce9bb8d526";
     final String TAG = "Failure sorry :(";
     MainActivity mainActivity = new MainActivity();
     @Override
@@ -44,14 +42,13 @@ public class Search extends Activity{
                 input = editText.getText().toString();
                 ApiInterface apiService =
                         ApiClient.getClient().create(ApiInterface.class);
-
                 Call<Example> call = apiService.getSearch(mainActivity.getCurrentLatitude(),
-                        mainActivity.getCurrentLongitude(), 20, API_KEY);
+                        mainActivity.getCurrentLongitude(), 20, API_KEY.getApiKey());
                 call.enqueue(new Callback<Example>() {
                     @Override
                     public void onResponse(Call<Example>call, Response<Example> response) {
                         List<Restaurant> restaurants = response.body().getRestaurants();
-                        recyclerView.setAdapter(new SearchAdapter(restaurants, R.layout.adapter, getApplicationContext()));
+                        recyclerView.setAdapter(new Adapter(restaurants, R.layout.adapter, getApplicationContext()));
                     }
 
                     @Override
